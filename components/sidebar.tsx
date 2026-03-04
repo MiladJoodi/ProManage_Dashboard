@@ -27,6 +27,8 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
+  Github,
+  Linkedin,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useUIStore } from "@/store/ui-store";
@@ -372,6 +374,49 @@ export function Sidebar() {
             )}
           </Tooltip>
         </TooltipProvider>
+
+        {/* Social Links */}
+        <div className={cn(
+          "flex items-center gap-1 pt-2 border-t border-sidebar-border",
+          sidebarCollapsed ? "flex-col" : "justify-center"
+        )}>
+          <TooltipProvider>
+            <Tooltip delayDuration={0}>
+              <TooltipTrigger asChild>
+                <a
+                  href="https://github.com/MiladJoodi/ProManage_Dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground cursor-pointer">
+                    <Github className="h-4 w-4" />
+                  </Button>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent side={sidebarCollapsed ? "right" : "top"} sideOffset={8}>
+                GitHub
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip delayDuration={0}>
+              <TooltipTrigger asChild>
+                <a
+                  href="https://www.linkedin.com/in/joodi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground cursor-pointer">
+                    <Linkedin className="h-4 w-4" />
+                  </Button>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent side={sidebarCollapsed ? "right" : "top"} sideOffset={8}>
+                LinkedIn
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
       </div>
     </div>
   );

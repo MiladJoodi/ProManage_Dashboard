@@ -79,7 +79,7 @@ A premium, fully-featured Project Management Dashboard built from scratch with N
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/dashboard-cla.git
+git clone https://github.com/MiladJoodi/ProManage_Dashboard.git
 cd dashboard-cla
 npm install
 ```
@@ -167,6 +167,11 @@ npm start
 | `npm run build` | Build for production |
 | `npm start` | Run production build |
 | `npm run lint` | Run ESLint |
+
+## Links
+
+- [GitHub Repository](https://github.com/MiladJoodi/ProManage_Dashboard)
+- [LinkedIn](https://www.linkedin.com/in/joodi/)
 
 ## License
 
